@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+	int n, x;
+	int maiorvalor = 0;
+	
+	cout << "Digite o tamanho da sequencia: ";
+	cin >> n;
+	int s[n];
+	
+	if (n<1 || n>100) {
+		cout << "Valor invalido";
+		return 0;
+	}
+	
+	for(int i=0; i<n; i++) {
+		cout << "\nDigite os valores " << i+1 << " da sequencia." << endl;
+		cin >> x;
+		
+		if (x==0) {
+			break;
+		}
+		
+		if (x<1 || x>1000) {
+			cout << "Valor invalido.";
+			return 0;
+		}
+		
+		s[i] = x;
+		
+		if(maiorvalor < s[i]) {
+			maiorvalor = s[i];
+		}
+	}
+	
+	cout << "\nO maior valor da sequencia foi: " << maiorvalor;
+	return 0;
+}
