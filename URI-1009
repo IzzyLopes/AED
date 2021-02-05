@@ -1,0 +1,54 @@
+#include <iostream>
+#include <iomanip>
+#include <locale.h>
+using namespace std;
+
+class Vendedor {
+	
+	string nome;
+	double salario, vendas;
+	
+	public:
+		Vendedor() {
+			nome = "N/A";
+		}
+		
+		string getNome() {
+			return nome;
+		}
+		
+		void setNome(string novoNome) {
+			nome = novoNome;
+		}
+		
+		void set_values(double x, double y) {
+			salario = x;
+			vendas = y;
+		}
+		
+		double total() {
+			return salario + (vendas*0.15);
+		}
+};
+
+int main() {
+	setlocale (LC_ALL, "Portuguese");
+	cout << setprecision(2) << fixed;
+	
+	Vendedor a, b, c;
+	
+	a.setNome("João");
+	a.set_values(500.00, 1230.00);
+		
+	b.setNome("Pedro");
+	b.set_values(700.00, 0.00);
+	
+	c.setNome("Mangojata");
+	c.set_values(1700.00, 1230.50);
+	
+	cout << "O salário total que " << a.getNome() << " recebeu foi de " << a.total() << endl;
+	cout << "O salário total que " << b.getNome() << " recebeu foi de " << b.total() << endl;
+	cout << "O salário total que " << c.getNome() << " recebeu foi de " << c.total() << endl;
+	
+	return 0;
+}
