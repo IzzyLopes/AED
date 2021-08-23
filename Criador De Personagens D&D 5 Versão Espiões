@@ -263,7 +263,7 @@ int main(){
 	cout<<"(0)Descrição das classes\n(1)Brucutu\n(2)Oculto\n(3)Tanque\n(4)Agente Tech\n(5)Sábio\n(6)Galã\nNúmero da classe: ";
 
 	int numclasse;
-	lasschoosec:
+	classchoose:
 	cin>>numclasse;
 	if(numclasse==0)
 	system("start https://drive.google.com/file/d/1wOstJsgfvwwZlWoW6y8JzOWvM60sIb2p/view");
